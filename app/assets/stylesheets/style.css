@@ -1,0 +1,27 @@
+
+@import "bootstrap";
+@import "boostrap";
+@import "entries";
+@import "feeds";
+@import "mdb";
+@import "static_pages";
+@import "style";
+@import "free/data/_colors";
+@import "free/data/_mixins";
+@import "sass";
+
+
+
+/* YOUR CUSTOM STYLES */
+.list-group-item.active {
+    background-color: #33b5e5;
+    border-color:#33b5e5
+}
+
+.list-group-item:not(.active) {
+    color:#222;
+}
+
+.list-group-item:not(.active):hover {
+    color:#666;
+}

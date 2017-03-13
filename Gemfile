@@ -6,7 +6,8 @@ git_source(:github) do |repo_name|
 end
 
 gem 'rails', '~> 5.0.1'
-gem 'mysql2', '>= 0.3.18', '< 0.5'
+# gem 'mysql2', '>= 0.3.18', '< 0.5'
+gem 'sqlite3', '~> 1.3', '>= 1.3.11'
 gem 'puma', '~> 3.0'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
@@ -43,7 +44,7 @@ group :test do
   gem 'capybara'
   gem 'database_cleaner'
   gem 'launchy'
-  gem 'selenium-webdriver'
+  gem 'selenium-webdriver', '~> 3.2', '>= 3.2.2'
 end
 
 group :production do
@@ -52,4 +53,3 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
