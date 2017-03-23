@@ -1,8 +1,13 @@
 class ContactsController < ApplicationController
-  # before_action :find_contact, only: [:show, :edit, :update, :destroy]
+  before_action :find_contact, only: [:show, :edit, :update, :destroy]
 
   def index
     @contacts = Contact.all
+
+    respond_to do |format|
+      format.html
+      format.csv { render text: @contacts.to_csv }
+    end
   end
 
   def show
