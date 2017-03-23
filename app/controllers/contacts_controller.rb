@@ -1,5 +1,5 @@
 class ContactsController < ApplicationController
-  before_action :find_contact, only: [:show, :edit, :update, :destroy]
+  # before_action :find_contact, only: [:show, :edit, :update, :destroy]
 
   def index
     @contacts = Contact.all
@@ -20,10 +20,11 @@ class ContactsController < ApplicationController
 
     if @contact.save
       flash[:notice] = "Contact has been created"
-      redirect_to @contact
+      redirect_to contacts_path
     else
       flash[:alert] = "Contact not created"
       render "new"
+    end
   end
 
   def update
@@ -47,11 +48,11 @@ class ContactsController < ApplicationController
   end
 
   private
-  def set_contact
-    @contact = Contact.find(params[:id])
-  end
-
   def contact_params
     params.require(:contact).permit(:category, :section, :website, :email, :mail, :street, :tel, :fax)
+  end
+
+  def set_contact
+    @contact = Contact.find(params[:id])
   end
 end
