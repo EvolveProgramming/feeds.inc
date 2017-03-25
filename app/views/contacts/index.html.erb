@@ -1,6 +1,33 @@
-<h2>Import Contacts</h2>
+<h2>Government and Parliament Contacts</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Category</th>
+      <th>Section</th>
+      <th>Website</th>
+      <th>Email</th>
+      <th>Mail</th>
+      <th>Street</th>
+      <th>Tel</th>
+      <th>Fax</th>
+    </tr>
+  </thead>
 
-<%= form_tag import_contacts_path, multipart: true do %>
-  <%= file_field_tag :file %>
-  <%= submit_tag "Import" %>
-<% end %>
+  <tbody>
+    <% @contacts.each do |contact| %>
+      <tr>
+        <td><%= contact.category %></td>
+        <td><%= contact.section %></td>
+        <td><%= contact.website %></td>
+        <td><%= contact.email %></td>
+        <td><%= contact.mail %></td>
+        <td><%= contact.street %></td>
+        <td><%= contact.tel %></td>
+        <td><%= contact.fax %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>
+<h4>Download the list of contacts</h4>
+<%= link_to "Contact List Download", contacts_path(format: "csv"), class: "btn btn-default" %>
