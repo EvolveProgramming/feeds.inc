@@ -3,59 +3,32 @@
 <html lang="en">
 
 <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-
     <title>FeedsInc</title>
-
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
-
     <!-- Bootstrap core CSS -->
     <link href="/bootstrap.min.css" rel="stylesheet">
-
     <!-- Material Design Bootstrap -->
     <link href="stylesheets/mdb.min.css" rel="stylesheet">
-
     <link href="stylesheets/style.css" rel="stylesheet">
 
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="images/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="images/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#ffffff">
     <!-- Template styles -->
     <style rel="stylesheet">
-        /* TEMPLATE STYLES */
-
-        main {
-            padding-top: 3rem;
-            padding-bottom: 2rem;
-        }
-
-        .widget-wrapper {
-            padding-bottom: 2rem;
-            border-bottom: 1px solid #e0e0e0;
-            margin-bottom: 2rem;
-        }
-
-
-        .navbar {
-            background-color: #53463d;
-        }
-
-        footer.page-footer {
-            background-color: #53463d;
-            margin-top: 2rem;
-
-        }
+  
     </style>
   </head>
-
     <body>
-
       <!--Navbar-->
       <nav class="navbar navbar-toggleable-md navbar-dark">
           <div class="container">
@@ -84,9 +57,25 @@
                       <input class="form-control" type="text" placeholder="Search">
                   </form>
               </div>
+              <p class="navbar-text pull-right">
+              <% if user_signed_in? %>
+                Logged in as <strong><%= current_user.email %></strong>.
+                <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+                <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+              <% else %>
+                <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
+                <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+              <% end %>
           </div>
       </nav>
       <!--/.Navbar-->
+
+      <% if notice %>
+        <p class="alert alert-success"><%= notice %></p>
+      <% end %>
+      <% if alert %>
+        <p class="alert alert-danger"><%= alert %></p>
+      <% end %>
 
       <%= yield %>
     </body>
