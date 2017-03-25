@@ -1,6 +1,6 @@
 class ComplaintsController < ApplicationController
   before_action :find_complaint, only: [:show, :edit, :update, :destroy]
-  
+
   def index
     @complaints = Complaint.all
   end
