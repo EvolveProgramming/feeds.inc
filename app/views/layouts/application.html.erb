@@ -25,7 +25,7 @@
     <meta name="theme-color" content="#ffffff">
     <!-- Template styles -->
     <style rel="stylesheet">
-  
+
     </style>
   </head>
     <body>
@@ -41,16 +41,16 @@
               <div class="collapse navbar-collapse" id="navbarNav1">
                   <ul class="navbar-nav mr-auto">
                       <li class="nav-item active">
-                          <a class="nav-link">Home <span class="sr-only">(current)</span></a>
+                          <a class="nav-link"><span class="sr-only">(current)<%= link_to "Home", root_path%></span></a>
                       </li>
                       <li class="nav-item">
-                          <a class="nav-link">Feeds</a>
+                          <a class="nav-link"><%= link_to "Feeds", feeds_path%></a>
                       </li>
                       <li class="nav-item">
-                          <a class="nav-link">Complaints</a>
+                          <a class="nav-link"><%= link_to "Complaints", complaints_path%></a>
                       </li>
                       <li class="nav-item">
-                          <a class="nav-link">Contacts</a>
+                          <a class="nav-link"><%= link_to "Contacts", contacts_path%></a>
                       </li>
                   </ul>
                   <form class="form-inline waves-effect waves-light">
