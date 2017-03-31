@@ -20,6 +20,9 @@ gem 'bootstrap', '~> 4.0.0.alpha3.1'
 gem 'devise'
 gem 'devise_invitable'
 gem 'feedjira'
+gem 'autoprefixer-rails'
+gem 'public_activity'
+gem 'omniauth-facebook'
 
 group :development, :test do
   gem 'factory_girl_rails'

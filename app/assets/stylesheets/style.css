@@ -1,6 +1,8 @@
 
 @import "bootstrap";
 @import "boostrap";
+@import "bootstrap-sprockets";
+@import 'bootstrap/theme';
 @import "entries";
 @import "feeds";
 @import "mdb";
@@ -9,6 +11,7 @@
 @import "free/data/_colors";
 @import "free/data/_mixins";
 @import "sass";
+
 
 
 /* TEMPLATE STYLES */
@@ -26,11 +29,11 @@ main {
 
 
 .navbar {
-    background-color: #53463d;
+    background-color: #193554;
 }
 
 footer.page-footer {
-    background-color: #53463d;
+    background-color: #193554;
     margin-top: 2rem;
 
 }

@@ -5,6 +5,12 @@ Rails.application.routes.draw do
   root 'feeds#index'
   get 'static_pages/contact'
 
+  resources :stories
+  delete '/logout', to: 'sessions#destroy', as: :logout
+  get '/auth/:provider/callback', to: 'sessions#create'
+
+root to: 'stories#index'
+
 
   resources :feeds do
     member do
