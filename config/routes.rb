@@ -1,7 +1,4 @@
 Rails.application.routes.draw do
-  get 'complaints/index'
-
-  devise_for :users
   root 'static_pages#index'
 
   get 'static_pages/home'
@@ -9,6 +6,8 @@ Rails.application.routes.draw do
   get 'static_pages/complaints'
   get 'static_pages/contact'
 
+  devise_for :users
+  
   resources :feeds do
     member do
       resources :entries, only: [:index, :show]
@@ -18,4 +17,7 @@ Rails.application.routes.draw do
   resources :contacts do
     collection { post :import }
   end
+
+  resources :complaints
+  resources :parties
 end

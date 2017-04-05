@@ -2,7 +2,11 @@ class ComplaintsController < ApplicationController
   before_action :find_complaint, only: [:show, :edit, :update, :destroy]
 
   def index
-    @complaints = Complaint.all
+    if params[:id].blank?
+      @complaints = Complaint.all.order('created_at DESC')
+    else
+      @complaints = Party.find(params[:id]).complaints.order(:created_at)
+    end
   end
 
   def show
@@ -44,7 +48,7 @@ class ComplaintsController < ApplicationController
 
   private
   def complaint_params
-    params.require(:complaint).permit(:title, :body)
+    params.require(:complaint).permit(:title, :body, :party_id)
   end
 
   def set_complaint

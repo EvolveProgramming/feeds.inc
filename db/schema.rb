@@ -10,13 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170325060036) do
+ActiveRecord::Schema.define(version: 20170402165436) do
 
   create_table "complaints", force: :cascade do |t|
     t.string   "title"
     t.text     "body"
+    t.integer  "party_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["party_id"], name: "index_complaints_on_party_id"
   end
 
   create_table "contacts", force: :cascade do |t|
@@ -46,6 +48,13 @@ ActiveRecord::Schema.define(version: 20170325060036) do
   create_table "feeds", force: :cascade do |t|
     t.string   "name"
     t.string   "url"
+    t.text     "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "parties", force: :cascade do |t|
+    t.string   "name"
     t.text     "description"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
