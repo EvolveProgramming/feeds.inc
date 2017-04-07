@@ -17,4 +17,7 @@ Rails.application.routes.draw do
   resources :contacts do
     collection { post :import }
   end
+
+  resources :complaints
+  resources :parties
 end
