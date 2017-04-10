@@ -18,6 +18,7 @@ Rails.application.routes.draw do
     collection { post :import }
   end
 
-  resources :complaints
+  # resources :complaints
   resources :parties
+  mount Commontator::Engine => '/commontator'
 end

@@ -29,46 +29,7 @@
     </style>
   </head>
     <body>
-      <!--Navbar-->
-      <nav class="navbar navbar-toggleable-md navbar-dark">
-          <div class="container">
-              <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav1" aria-controls="navbarNav1" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-              </button>
-              <a class="navbar-brand" href="#">
-                  <strong>Navbar</strong>
-              </a>
-              <div class="collapse navbar-collapse" id="navbarNav1">
-                  <ul class="navbar-nav mr-auto">
-                      <li class="nav-item active">
-                          <a class="nav-link"><span class="sr-only">(current)<%= link_to "Home", root_path%></span></a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link"><%= link_to "Feeds", feeds_path%></a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link"><%= link_to "Complaints", complaints_path%></a>
-                      </li>
-                      <li class="nav-item">
-                          <a class="nav-link"><%= link_to "Contacts", contacts_path%></a>
-                      </li>
-                  </ul>
-                  <form class="form-inline waves-effect waves-light">
-                      <input class="form-control" type="text" placeholder="Search">
-                  </form>
-              </div>
-              <p class="navbar-text pull-right">
-              <% if user_signed_in? %>
-                Logged in as <strong><%= current_user.email %></strong>.
-                <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
-                <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-              <% else %>
-                <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
-                <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
-              <% end %>
-          </div>
-      </nav>
-      <!--/.Navbar-->
+      <%= render "layouts/nav" %>
 
       <% if notice %>
         <p class="alert alert-success"><%= notice %></p>
@@ -76,8 +37,11 @@
       <% if alert %>
         <p class="alert alert-danger"><%= alert %></p>
       <% end %>
+     
 
-      <%= yield %>
+      <div class="container">
+        <%= yield %>
+      </div>
     </body>
 
 </html>
