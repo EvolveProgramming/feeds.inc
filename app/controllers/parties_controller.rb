@@ -1,18 +1,18 @@
 class PartiesController < ApplicationController
   before_action :set_party, only: [:show, :edit, :update, :destroy]
 
-  # def index
-  #   @parties = Party.all
-  # end
-
   def index
-    if params[:party].blank?
-      @parties = Party.all.order('created_at DESC')
-    else
-      @complaint_id = Complaint.find_by(title: params[:party]).id
-      @parties = Party.where(party_id: @party_id).order("created_at DESC")
-    end
+    @parties = Party.all
   end
+
+  # def index
+  #   if params[:party].blank?
+  #     @parties = Party.all.order('created_at DESC')
+  #   else
+  #     @complaint_id = Complaint.find_by(title: params[:party]).id
+  #     @parties = Party.where(party_id: @party_id).order("created_at DESC")
+  #   end
+  # end
 
   def show
   end
