@@ -1,6 +1,6 @@
 class StaticPagesController < ApplicationController
   def index
-  	@entries = @feed.entries.order('published desc')
+  	@feeds = Feed.all
   end
 
   def home

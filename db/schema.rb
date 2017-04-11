@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170410132014) do
+ActiveRecord::Schema.define(version: 20170411154912) do
 
   create_table "commontator_comments", force: :cascade do |t|
     t.string   "creator_type"
@@ -80,6 +80,7 @@ ActiveRecord::Schema.define(version: 20170410132014) do
     t.integer  "feed_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text     "summary"
   end
 
   create_table "feeds", force: :cascade do |t|

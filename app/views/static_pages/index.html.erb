@@ -1,9 +1,15 @@
 <div class="container">
-  <% @entries.each do |entry| %>
-    <div class="panel panel-default">
-      <div class="panel-body">
-        <%= link_to entry.title, entry %> - <i> published <%= time_ago_in_words(entry.published) %> ago.</i>
-      </div>
+    <div class="row">
+        <!--Main column-->
+        <div class="col-lg-8">
+            <p id="notice"><%= notice %></p>
+            <h1>Feeds</h1>
+            <% @feeds.each do |feed| %>
+            <div>
+            <%= link_to feed.name, entries_path(id: feed.id), class:"list-group-item" %>
+            <% end %>    
+            </div>
+            <br>
+        </div>
     </div>
-  <% end %>
 </div>

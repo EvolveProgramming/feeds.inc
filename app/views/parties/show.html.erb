@@ -1,16 +1,13 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @party.name %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @party.description %>
-</p>
-
-<%= link_to 'Edit', edit_party_path(@party) %> |
-<%= link_to 'Back', parties_path %>
-
-<%= commontator_thread(@party) %>
+<div class="container">
+	<div class="row">
+		<div class="col-lg-8">
+			<h2><%= @party.name %></h2>
+			<p><%= @party.description %></p>
+			<%= link_to 'Edit', edit_party_path(@party), class: "btn btn-primary" %> |
+			<%= link_to 'Back', parties_path, class: "btn btn-warning" %>
+		</div>
+	</div>
+	<br>
+	<hr>
+	<%= commontator_thread(@party) %>
+</div>
