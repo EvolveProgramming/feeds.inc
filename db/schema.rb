@@ -50,15 +50,12 @@ ActiveRecord::Schema.define(version: 20170410132014) do
     t.datetime "updated_at"
     t.index ["commontable_id", "commontable_type"], name: "index_commontator_threads_on_c_id_and_c_type", unique: true
   end
->>>>>>> f683e9819ae9ccf70fb9fed1753833f87c00c657
 
   create_table "complaints", force: :cascade do |t|
     t.string   "title"
     t.text     "body"
-    t.integer  "party_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["party_id"], name: "index_complaints_on_party_id"
   end
 
   create_table "contacts", force: :cascade do |t|

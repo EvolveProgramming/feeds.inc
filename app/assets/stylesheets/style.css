@@ -1,18 +1,3 @@
-
-@import "bootstrap";
-@import "boostrap";
-@import "entries";
-@import "feeds";
-@import "mdb";
-@import "static_pages";
-@import "style";
-@import "free/data/_colors";
-@import "free/data/_mixins";
-@import "sass";
-
-
-/* TEMPLATE STYLES */
-
 main {
     padding-top: 3rem;
     padding-bottom: 2rem;

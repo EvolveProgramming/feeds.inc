@@ -11,12 +11,10 @@
  * It is generally better to create a new file per style scope.
  *
  //= require bootstrap
- //= require entries
- //= require feeds
- //= require mdb
- //= require static_pages
  //= require style
- *= require_tree .
- *= require_self
  *= require commontator/application
  */
+@import "bootstrap";
+
+
+ 
