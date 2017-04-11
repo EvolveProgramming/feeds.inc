@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170410132014) do
+ActiveRecord::Schema.define(version: 20170411154912) do
 
   create_table "commontator_comments", force: :cascade do |t|
     t.string   "creator_type"
@@ -50,15 +50,12 @@ ActiveRecord::Schema.define(version: 20170410132014) do
     t.datetime "updated_at"
     t.index ["commontable_id", "commontable_type"], name: "index_commontator_threads_on_c_id_and_c_type", unique: true
   end
->>>>>>> f683e9819ae9ccf70fb9fed1753833f87c00c657
 
   create_table "complaints", force: :cascade do |t|
     t.string   "title"
     t.text     "body"
-    t.integer  "party_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["party_id"], name: "index_complaints_on_party_id"
   end
 
   create_table "contacts", force: :cascade do |t|
@@ -83,6 +80,7 @@ ActiveRecord::Schema.define(version: 20170410132014) do
     t.integer  "feed_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text     "summary"
   end
 
   create_table "feeds", force: :cascade do |t|
