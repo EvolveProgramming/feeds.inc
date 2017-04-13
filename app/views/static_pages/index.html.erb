@@ -1,15 +1,15 @@
-<div class="container">
-    <div class="row">
-        <!--Main column-->
-        <div class="col-lg-8">
-            <p id="notice"><%= notice %></p>
-            <h1>Feeds</h1>
-            <% @feeds.each do |feed| %>
-            <div>
+<div class="row">
+    <!--Main column-->
+    <div class="col-lg-8">
+        <h1>Feeds</h1>
+        <% @feeds.each do |feed| %>
+        <div>
             <%= link_to feed.name, entries_path(id: feed.id), class:"list-group-item" %>
-            <% end %>    
-            </div>
-            <br>
         </div>
+         <% end %>
+    </div>
+
+    <div class="col-lg-3">
+        <img alt="Rails logo" src="/assets/turn.jpg" />
     </div>
 </div>

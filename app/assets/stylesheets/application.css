@@ -6,3 +6,35 @@
  *= require_tree .
  *= require commontator/application
 */
+
+
+.body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #f7f7f7;
+}
+
+body .container {
+	padding-top: 90px;
+}
+
+.navbar {
+    background-color: crimson;
+}
+
+.logo {
+	font-family: sans-serif;
+    font-size: x-large;
+    font-weight: bolder;
+    color: bisque;
+}
+
+.table {
+	background-color: azure; 
+}
+
+.footer {
+    background-color: crimson;
+}

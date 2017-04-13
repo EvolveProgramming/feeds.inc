@@ -23,8 +23,8 @@ class PartiesController < ApplicationController
       flash[:notice] = "Political Party created"
       redirect_to parties_path
     else
-      flash[:notice] = "Political Part not created"
-      redirect_to parties_path
+      flash[:alert] = "Political Part not created"
+      render "new"
     end
   end
 
