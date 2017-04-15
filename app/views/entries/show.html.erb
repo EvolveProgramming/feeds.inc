@@ -1,9 +1,12 @@
 <div class="container">
-	<h3><%= link_to @entry.title, @entry.url %></h3>
-	<i>published on <%= @entry.published %> by <%= @entry.author %></i>
-	<p>
-		<%= @entry.content.html_safe if @entry.content.present? %>
-	</p>
-
-	<p><%= @entry.summary.html_safe if @entry.summary.present?%></p>
+	<div class="row">
+		<div class="col-lg-8">
+			<h3><%= link_to @entry.title, @entry.url %></h3>
+			<i>published on <%= @entry.published %> by <%= @entry.author %></i>
+			<p>
+				<%= @entry.content.html_safe if @entry.content.present? %>
+			</p>
+			<p><%= @entry.summary.html_safe if @entry.summary.present?%></p>
+		</div>
+	</div>
 </div>
