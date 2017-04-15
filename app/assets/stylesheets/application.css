@@ -31,6 +31,24 @@ body .container {
     color: bisque;
 }
 
+
+.righter {
+    padding-right: 30px;
+}
+
+
+
+.navbar-light .navbar-nav .nav-link {
+    color: aliceblue;
+}
+
+.nav-item .nav-link {
+    font-size: larger;
+    font-style: oblique;
+    font-weight: bold;
+    color: aliceblue;
+}
+
 .table {
 	background-color: azure; 
 }

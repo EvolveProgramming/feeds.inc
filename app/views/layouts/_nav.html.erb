@@ -7,13 +7,13 @@
       <a class="navbar-brand logo" <%= link_to "FEEDS.inc", root_path %></a>
 
     </ul>
-    <ul class="nav navbar-nav navbar-right">
+    <ul class="nav navbar-nav navbar-right righter">
     <li class="nav-item"><%= link_to "Feeds", feeds_path, class: "nav-link"%></li>
       <li class="nav-item"><%= link_to "Contacts", contacts_path, class: "nav-link"%></li>
       <li class="nav-item"><%= link_to "Complaints", parties_path, class: "nav-link"%></li>
-      <li><%= link_to "Logout",  destroy_user_session_path, method: :delete, class: "nav-link" %></li>
-      <li><%= link_to "SignUp",  new_user_registration_path, class: "nav-link" %></li>
-      <li><%= link_to "SignIn",  new_user_session_path, class: "nav-link" %></li>
+      <li class="nav-item"><%= link_to "Logout",  destroy_user_session_path, method: :delete, class: "nav-link" %></li>
+      <li class="nav-item"><%= link_to "SignUp",  new_user_registration_path, class: "nav-link" %></li>
+      <li class="nav-item"><%= link_to "SignIn",  new_user_session_path, class: "nav-link" %></li>
     </ul>
   </div>
 </nav>
