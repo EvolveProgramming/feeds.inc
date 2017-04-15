@@ -1,9 +1,15 @@
-<div class="container">
-  <% @entries.each do |entry| %>
-    <div class="panel panel-default">
-      <div class="panel-body">
-        <%= link_to entry.title, entry %> - <i> published <%= time_ago_in_words(entry.published) %> ago.</i>
-      </div>
+<div class="row">
+	<div class="col-lg-8">
+		<% @entries.each do |entry| %>
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<%= link_to entry.title, entry %> - <i> published <%= time_ago_in_words(entry.published) %> ago.</i>
+			</div>
+		</div>
+		<% end %>
+	</div>
+
+	<div class="col-lg-4">
+       <img alt="Rails logo" src="/assets/standard.jpg" />
     </div>
-  <% end %>
 </div>

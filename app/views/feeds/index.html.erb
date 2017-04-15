@@ -1,20 +1,14 @@
 <!--Main layout-->
-<div class="container">
-    <div class="row">
-        <!--Main column-->
-        <div class="col-lg-8">
-            <p id="notice"><%= notice %></p>
-            <h1>Feeds</h1>
-            <% @feeds.each do |feed| %>
-            <div>
-            <%= link_to feed.name, entries_path(id: feed.id), class:"list-group-item" %>
-            <%= link_to 'Edit', edit_feed_path(feed) %>
-            <%= link_to 'Destroy', feed, method: :delete, data: { confirm: 'Are you sure?' } %>
-            <% end %>    
-            </div>
-            
-            <br>
-            <%= link_to 'New Feed', new_feed_path %>
-        </div>
+<div class="row">
+    <!--Main column-->
+    <div class="col-lg-8">
+        <p id="notice"><%= notice %></p>
+        <h1>Feeds</h1>
+        <% @feeds.each do |feed| %>
+        <%= link_to feed.name, entries_path(id: feed.id), class:"list-group-item" %>
+        <% end %>
+        
+        <br>
+        <%= link_to 'New Feed', new_feed_path, class: "btn btn-primary" %>
     </div>
 </div>

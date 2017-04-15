@@ -28,7 +28,7 @@
 
     </style>
   </head>
-    <body>
+    <body class="body">
       <%= render "layouts/nav" %>
 
       <% if notice %>
@@ -42,6 +42,7 @@
       <div class="container">
         <%= yield %>
       </div>
+      <hr>
+      <%= render "layouts/footer" %>
     </body>
-
 </html>
