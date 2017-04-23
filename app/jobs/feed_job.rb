@@ -3,5 +3,7 @@ class FeedJob < ApplicationJob
 
   def perform(*args)
     # Do something later
+    rake sync:feeds
+    # puts "Heello The job is working"
   end
 end

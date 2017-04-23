@@ -13,7 +13,7 @@
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit %>
+    <%= f.button :submit, class: "btn btn-secondary" %>
   </div>
 <% end %>
 
@@ -21,5 +21,5 @@
 
 <%= form_tag import_contacts_path, multipart: true do %>
   <%= file_field_tag :file %>
-  <%= submit_tag "Import" %>
+  <%= submit_tag "Import", class: "btn btn-info" %>
 <% end %>

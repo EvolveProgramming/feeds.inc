@@ -6,6 +6,8 @@
  *= require_tree .
  *= require commontator/application
 */
+@import "font-awesome-sprockets";
+@import "font-awesome";
 
 
 .body {
@@ -56,4 +58,8 @@ body .container {
 
 .footer {
     background-color: crimson;
+}
+
+.social {
+    display: -webkit-box;
 }
