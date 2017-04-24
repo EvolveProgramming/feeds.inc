@@ -1,8 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -17,7 +15,6 @@
     <!-- Material Design Bootstrap -->
     <link href="stylesheets/mdb.min.css" rel="stylesheet">
     <link href="stylesheets/style.css" rel="stylesheet">
-
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="images/png" href="/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="images/png" href="/favicon-16x16.png" sizes="16x16">
@@ -25,24 +22,24 @@
     <meta name="theme-color" content="#ffffff">
     <!-- Template styles -->
     <style rel="stylesheet">
-
     </style>
   </head>
-    <body class="body">
-      <%= render "layouts/nav" %>
-
-      <% if notice %>
-        <p class="alert alert-success"><%= notice %></p>
+  <body class="body">
+    <%= render "layouts/nav" %>
+    
+    <div class="container">
+      <% unless flash.empty? %>
+      <script type="text/javascript">
+      <% flash.each do |f| %>
+      <% type = f[0].to_s.gsub('alert', 'error').gsub('notice', 'info') %>
+      toastr['<%= type %>']('<%= f[1] %>');
       <% end %>
-      <% if alert %>
-        <p class="alert alert-danger"><%= alert %></p>
+      </script>
       <% end %>
-     
-
-      <div class="container">
-        <%= yield %>
-      </div>
-      <hr>
-      <%= render "layouts/footer" %>
-    </body>
+      
+      <%= yield %>
+    </div>
+    <hr>
+    <%= render "layouts/footer" %>
+  </body>
 </html>
