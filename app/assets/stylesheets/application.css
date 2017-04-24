@@ -5,7 +5,10 @@
  *= require_self
  *= require_tree .
  *= require commontator/application
+ *= require toastr
 */
+@import "font-awesome-sprockets";
+@import "font-awesome";
 
 
 .body {
@@ -54,6 +57,20 @@ body .container {
 	background-color: azure; 
 }
 
+/*footer*/
 .footer {
     background-color: crimson;
+    .social {
+        display: -webkit-box;
+    }
+    @media screen and (max-width: 767px) {
+        
+    }
 }
+
+/*.social {
+    display: -webkit-box;
+    @media screen and (max-width: 767px) {
+
+    }
+}*/

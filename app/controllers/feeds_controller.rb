@@ -2,6 +2,7 @@ class FeedsController < ApplicationController
   before_action :set_feed, only: [:show, :edit, :update, :destroy]
 
   def index
+    FeedJob.set(wait: 1.minute).perform_later 1,2,3
     @feeds = Feed.all
   end
 

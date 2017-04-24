@@ -1,10 +1,8 @@
 Rails.application.routes.draw do
 
-  devise_for :users
-  
-  root 'static_pages#index'
-  get 'static_pages/contact'
-
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  mount Commontator::Engine => '/commontator'
+  devise_for :users, :controllers => { registrations: 'registrations' }
 
   resources :feeds do
     member do
@@ -12,13 +10,14 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :complaints
-
   resources :contacts do
     collection { post :import }
   end
 
-  # resources :complaints
+  resources :complaints
   resources :parties
-  mount Commontator::Engine => '/commontator'
+
+  root 'static_pages#index'
+  get 'static_pages/contact'
+
 end

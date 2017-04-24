@@ -1,4 +1,5 @@
 class ContactsController < ApplicationController
+  # before_action :authenticate_superadmin!, only:[ :new, :edit, :update, :create, :destroy ]
   before_action :find_contact, only: [:show, :edit, :update, :destroy]
 
   def index

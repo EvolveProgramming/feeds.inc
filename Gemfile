@@ -18,6 +18,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 # gem 'bootstrap', '~> 4.0.0.alpha3.1'
 gem 'twitter-bootstrap-rails'
+gem 'font-awesome-sass', '~> 4.7.0'
 gem 'devise'
 gem 'devise_invitable'
 gem 'feedjira'
@@ -53,6 +54,25 @@ group :production do
   # gem 'unicorn'
   gem 'pg'
 end
+
+gem 'cancancan'
+gem 'rolify'
+gem 'toastr-rails'
+gem 'ckeditor'
+gem 'paperclip'
+gem 'stathat'
+gem 'google-analytics-rails', '1.1.0'
+gem 'masonry-rails'
+gem 'rails_admin', '~> 1.0'
+# gem 'activeadmin', '~> 1.0.0.pre4'
+gem 'redcarpet'
+gem 'coderay'
+gem 'albino'
+gem 'will_paginate', '~> 3.1.0'
+gem 'acts_as_votable', '~> 0.10.0'
+gem 'haml', '~> 4.0', '>= 4.0.7'
+gem 'jquery-turbolinks'
+gem 'social-share-button'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
