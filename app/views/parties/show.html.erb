@@ -3,6 +3,7 @@
 		<div class="col-lg-8">
 			<h2><%= @party.name %></h2>
 			<p><%= @party.description %></p>
+			<%= image_tag(@party.picture.to_s) %>
 			<%= link_to 'Edit', edit_party_path(@party), class: "btn btn-primary" %> |
 			<%= link_to 'Back', parties_path, class: "btn btn-warning" %>
 		</div>

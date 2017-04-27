@@ -6,7 +6,6 @@ git_source(:github) do |repo_name|
 end
 
 gem 'rails', '~> 5.0.1'
-# gem 'mysql2', '>= 0.3.18', '< 0.5'
 gem 'puma', '~> 3.0'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
@@ -16,7 +15,6 @@ gem 'coffee-rails', '~> 4.2'
 gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
-# gem 'bootstrap', '~> 4.0.0.alpha3.1'
 gem 'twitter-bootstrap-rails'
 gem 'font-awesome-sass', '~> 4.7.0'
 gem 'devise'
@@ -64,7 +62,6 @@ gem 'stathat'
 gem 'google-analytics-rails', '1.1.0'
 gem 'masonry-rails'
 gem 'rails_admin', '~> 1.0'
-# gem 'activeadmin', '~> 1.0.0.pre4'
 gem 'redcarpet'
 gem 'coderay'
 gem 'albino'
@@ -73,6 +70,9 @@ gem 'acts_as_votable', '~> 0.10.0'
 gem 'haml', '~> 4.0', '>= 4.0.7'
 gem 'jquery-turbolinks'
 gem 'social-share-button'
+gem 'carrierwave', '0.11.2'
+gem 'mini_magick', '4.5.1'
+gem 'fog', '1.38.0'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
