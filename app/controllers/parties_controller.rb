@@ -1,5 +1,4 @@
 class PartiesController < ApplicationController
-  before_action :authenticate_user!
   before_action :set_party, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -7,6 +6,7 @@ class PartiesController < ApplicationController
   end
 
   def show
+    commontator_thread_show(@party)
   end
 
   def new
@@ -49,6 +49,6 @@ class PartiesController < ApplicationController
   end
 
   def party_params
-    params.require(:party).permit(:name, :description)
+    params.require(:party).permit(:name, :description, :picture)
   end
 end

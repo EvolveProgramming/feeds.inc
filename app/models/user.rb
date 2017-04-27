@@ -6,4 +6,5 @@ class User < ApplicationRecord
 
   acts_as_commontator
   validates :username, presence: true
+  mount_uploader :picture, PictureUploader
 end
