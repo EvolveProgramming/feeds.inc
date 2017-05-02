@@ -244,11 +244,11 @@
       <pre class="lines">
 
 
-9
-10</pre>
+10
+11</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/controllers/static_pages_controller.rb', line 9</span>
+      <pre class="code"><span class="info file"># File 'app/controllers/static_pages_controller.rb', line 10</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_about'>about</span>
 <span class='kw'>end</span></pre>
@@ -272,11 +272,11 @@
       <pre class="lines">
 
 
-12
-13</pre>
+13
+14</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/controllers/static_pages_controller.rb', line 12</span>
+      <pre class="code"><span class="info file"># File 'app/controllers/static_pages_controller.rb', line 13</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_contact'>contact</span>
 <span class='kw'>end</span></pre>
@@ -300,11 +300,11 @@
       <pre class="lines">
 
 
-6
-7</pre>
+7
+8</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'app/controllers/static_pages_controller.rb', line 6</span>
+      <pre class="code"><span class="info file"># File 'app/controllers/static_pages_controller.rb', line 7</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_home'>home</span>
 <span class='kw'>end</span></pre>
@@ -330,13 +330,15 @@
 
 2
 3
-4</pre>
+4
+5</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'app/controllers/static_pages_controller.rb', line 2</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_index'>index</span>
-	<span class='ivar'>@feeds</span> <span class='op'>=</span> <span class='const'>Feed</span><span class='period'>.</span><span class='id identifier rubyid_all'>all</span>
+  <span class='comment'># @entries = Entry.all.order(&#39;created_at DESC&#39;)
+</span>  <span class='ivar'>@entries</span> <span class='op'>=</span> <span class='const'>Entry</span><span class='period'>.</span><span class='id identifier rubyid_all'>all</span><span class='period'>.</span><span class='id identifier rubyid_paginate'>paginate</span><span class='lparen'>(</span><span class='label'>page:</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:page</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='label'>per_page:</span> <span class='int'>15</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_order'>order</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>created_at DESC</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -348,7 +350,7 @@
 </div>
 
       <div id="footer">
-  Generated on Fri Apr 28 12:22:06 2017 by
+  Generated on Tue May  2 12:09:00 2017 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.5 (ruby-2.3.3).
 </div>
