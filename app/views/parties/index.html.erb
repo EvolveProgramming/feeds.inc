@@ -1,17 +1,16 @@
 <div class="container">
-  <p>Keep note that all comments on political parties are all posted as anonymous for the protection of the public and our users</p>
-  <p>Please choose a political party that you would like to complain about</p>
-  <div class="row">
-    <div class="col-lg-8">
-      <h1>Political Parties</h1>
-      <% @parties.each do |party| %>
-      <h3><%= link_to party.name, party %></h3>
-      <br>
-      <%= link_to 'Edit', edit_party_path(party), class: "btn btn-success" %>
-      <%= link_to 'Destroy', party, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
-      <% end %>
+    <div class="row">
+    <h1>Political Parties</h1>
+        <div class="col-lg-10 parties">
+            <% @parties.each do |party| %>
+                <h3><%= link_to party.name, party %></h3>
+                <%= link_to (image_tag party.image.url(:thumb)), party, class: "img-thumbnail" %>
+                <br>
+                <%= link_to 'Edit', edit_party_path(party), class: "btn btn-success" %>
+                <%= link_to 'Destroy', party, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+            <% end %>
+        </div>
     </div>
-  </div>
-  <br>
-  <%= link_to 'New Party', new_party_path, class: 'btn btn-primary' %>
+    <br>
+    <%= link_to 'New Party', new_party_path, class: 'btn btn-primary' %>
 </div>
