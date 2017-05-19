@@ -69,6 +69,22 @@ body .container {
 	background-color: azure; 
 }
 
+/*Navigation*/
+
+.nav-wrap {
+    transition: top .3s ease-in-out,height .3s ease-in-out;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    background: rgba(255,255,255,0.97);
+    font-family: "Montserrat";
+    height: 46px;
+    position: absolute;
+    top: 75px;
+    font-size: 13px;
+    width: 100%;
+    right: 0;
+    left: 0;
+}
+
 /*footer*/
 .footer {
     background-color: #f7f7f7;

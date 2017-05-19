@@ -1,14 +1,27 @@
-<!--Main layout-->
-<div class="row">
-    <!--Main column-->
-    <div class="col-lg-8">
-        <p id="notice"><%= notice %></p>
-        <h1>Feeds</h1>
-        <% @feeds.each do |feed| %>
-        <%= link_to feed.name, entries_path(id: feed.id), class:"list-group-item" %>
-        <% end %>
+
+
+<div class="container-fluid">
         
-        <br>
-        <%= link_to 'New Feed', new_feed_path, class: "btn btn-primary" %>
+    <div class="section-grid row">
+        <div class="featured-image  premium  col-md-6">
+            <%= image_tag "bitcoin.png" %>
+        </div>
+        <div class="featured-articles col-md-6">
+
+            <!--Main layout-->
+                <div class="row">
+                    <!--Main column-->
+                    <div class="col-lg-8">
+                        <p id="notice"><%= notice %></p>
+                        <h1>Feeds</h1>
+                        <% @feeds.each do |feed| %>
+                        <%= link_to feed.name, entries_path(id: feed.id), class:"list-group-item" %>
+                        <% end %>
+                        
+                        <br>
+                        <%= link_to 'New Feed', new_feed_path, class: "btn btn-primary" %>
+                    </div>
+                </div>
+        </div>
     </div>
 </div>
