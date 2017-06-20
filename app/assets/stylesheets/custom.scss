@@ -1,14 +1,25 @@
-/*
- * This is a manifest file that'll automatically include all the stylesheets available in this directory
- * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
- * the top of the compiled file, but it's generally better to create a new file per style scope.
- *= require_self
- *= require_tree .
- *= require commontator/application
- *= require toastr
-*/
-@import "font-awesome-sprockets";
-@import "font-awesome";
+@import "bootstrap";
+
+/* universal */
+
+body {
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+}
+
+.center h1 {
+  margin-bottom: 10px;
+}
 
 
 .body {
@@ -20,6 +31,7 @@
 }
 
 body .container {
+	padding-top: 90px;
 }
 
 .navbar {
@@ -54,6 +66,22 @@ body .container {
 
 .table {
 	background-color: azure; 
+}
+
+/*Navigation*/
+
+.nav-wrap {
+    transition: top .3s ease-in-out,height .3s ease-in-out;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    background: rgba(255,255,255,0.97);
+    font-family: "Montserrat";
+    height: 46px;
+    position: absolute;
+    top: 75px;
+    font-size: 13px;
+    width: 100%;
+    right: 0;
+    left: 0;
 }
 
 /*footer*/

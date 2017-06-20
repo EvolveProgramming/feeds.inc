@@ -1,7 +1,33 @@
+    <!--banner-->
+    <section id="banner">
+      <div class="bg-color">
+        <header id="header">
+            <div class="container">
+                <div id="mySidenav" class="sidenav">
+                  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                  <a> <%=link_to "FEEDS.inc", root_path %></a>
+                  <a><%= link_to "News", root_path, class: "nav-link"%></a>
+                  <a><%= link_to "Feeds", feeds_path, class: "nav-link"%></a>
+                  <a>  <%= link_to "Contacts", contacts_path, class: "nav-link"%></a>
+                </div>
+                <!-- Use any element to open the sidenav -->
+                <span onclick="openNav()" class="pull-right menu-icon">☰</span>
+            </div>
+        </header>
+        <div class="container">
+        <div class="row">
+          <div class="inner text-center">
+            <h1 class="logo-name">News Feeds Inc</h1>
+            <h2>Newsfeeds to fit your lifestyle </h2>
+            <p>Search for your newsfeed</p>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+<!-- <div class= "nav-wrap">
 <nav class="navbar navbar-toggleable-md navbar-light navbar-fixed-top">
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-  <span class="navbar-toggler-icon"></span>
-  </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav ">
             <a class="navbar-brand logo" <%=link_to "FEEDS.inc", root_path %></a>
@@ -41,4 +67,5 @@
                     <% end %>
         </ul>
     </div>
-</nav>
+</nav> -->
+</div>
