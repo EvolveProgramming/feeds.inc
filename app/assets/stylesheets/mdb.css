@@ -1593,10 +1593,10 @@
   color: #424242 !important; }
 
 .grey.darken-4 {
-  background-color: #212121 !important; }
+  background-color: #ffffff !important; }
 
 .grey-text.text-darken-4 {
-  color: #212121 !important; }
+  color: #ffffff !important; }
 
 .shades.black {
   background-color: #000000 !important; }
@@ -1680,7 +1680,7 @@
   background-color: #2E2E2E !important; }
 
 .elegant-color-dark {
-  background-color: #212121 !important; }
+  background-color: #ffffff !important; }
 
 .stylish-color {
   background-color: #4B515D !important; }
@@ -6210,12 +6210,12 @@ i.btn-danger {
     background-color: rgba(255, 255, 255, 0.1); }
   .navbar.navbar-dark .breadcrumb .dropdown-menu a,
   .navbar.navbar-dark .navbar-nav .nav-item .dropdown-menu a {
-    color: #212121; }
+    color: #ffffff; }
     .navbar.navbar-dark .breadcrumb .dropdown-menu a:hover, .navbar.navbar-dark .breadcrumb .dropdown-menu a:focus, .navbar.navbar-dark .breadcrumb .dropdown-menu a:active,
     .navbar.navbar-dark .navbar-nav .nav-item .dropdown-menu a:hover,
     .navbar.navbar-dark .navbar-nav .nav-item .dropdown-menu a:focus,
     .navbar.navbar-dark .navbar-nav .nav-item .dropdown-menu a:active {
-      color: #212121; }
+      color: #ffffff; }
   .navbar.navbar-dark .nav-link {
     color: #fff; }
   .navbar.navbar-dark .navbar-toggler {
@@ -6224,12 +6224,12 @@ i.btn-danger {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.9)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); }
   .navbar.navbar-light .breadcrumb a,
   .navbar.navbar-light .nav-item a {
-    color: #212121;
+    color: #ffffff;
     transition: .35s; }
     .navbar.navbar-light .breadcrumb a:hover,
     .navbar.navbar-light .nav-item a:hover {
       transition: .35s;
-      color: #212121; }
+      color: #ffffff; }
   .navbar.navbar-light .breadcrumb.active,
   .navbar.navbar-light .nav-item.active {
     background-color: rgba(158, 158, 158, 0.2); }

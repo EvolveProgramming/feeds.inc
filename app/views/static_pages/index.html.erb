@@ -1,31 +1,31 @@
-<div class="container-fluid">
+<div class="container">
+    <div class="row">
 
-<div class="row">
-        <div class="featured-image  premium  col-md-6">
-            <%= image_tag "ad.jpeg" %>
-        </div>
-   
-    <!--Main column-->
-    <div class="col-lg-8">
-        <h1>News</h1>
-        <hr>
-        <%= will_paginate @entries %>
-        <% @entries.each do |entry| %>
-        <div class="panel panel-default">
-            <div class="panel-body">
-                <h4>
-                <%= link_to entry.title, entry %>
-                <p><i> published <%= time_ago_in_words(entry.published) %> ago.</i></p>
-                </h4>
-                <p>
-                    <%= entry.content.html_safe if entry.content.present? %>
-                </p>
+       
+        <!--Main column-->
+        <div class="col-lg-8">
+            <h1>News</h1>
+            <hr>
+            <%= will_paginate @entries %>
+            <% @entries.each do |entry| %>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <h4>
+                    <%= link_to entry.title, entry %>
+                    <p><i> published <%= time_ago_in_words(entry.published) %> ago.</i></p>
+                    </h4>
+                    <p>
+                        <%= entry.content.html_safe if entry.content.present? %>
+                    </p>
+                </div>
             </div>
+            <% end %>
+            <%= will_paginate @entries %>
         </div>
-        <% end %>
-        <%= will_paginate @entries %>
-    </div>
-    <div class="col-lg-4">
-        <img alt="Rails logo" src="https://unsplash.it/200/300/?random" />
+
+<!--         advertising
+ -->            <div class="col-sm-2">
+                    <%= image_tag "ad2.gif" %>
+            </div>
     </div>
 </div>
