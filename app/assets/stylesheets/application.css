@@ -21,7 +21,9 @@ nav{
     font-size: 14px;
 }
 
-
+a .nav-link {
+    color: #fff;
+}
 nav .logo {
     transition: width .3s ease-in-out;
     display: inline-block;
@@ -31,3 +33,25 @@ nav .logo {
     height: 100%;
 }
 
+
+        main {
+            padding-top: 3rem;
+            padding-bottom: 2rem;
+        }
+        
+        .widget-wrapper {
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #e0e0e0;
+            margin-bottom: 2rem;
+        }
+        
+          
+        .navbar {
+            background-color: #3A3A3A;
+        }
+        
+        footer .page-footer {
+            background-color: #000000;
+            margin-top: 2rem;
+         
+        }

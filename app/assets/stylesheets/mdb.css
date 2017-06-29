@@ -1686,7 +1686,7 @@
   background-color: #4B515D !important; }
 
 .stylish-color-dark {
-  background-color: #3E4551 !important; }
+  background-color: #0 !important; }
 
 .special-color {
   background-color: #37474F !important; }
@@ -6637,7 +6637,7 @@ i.btn-danger {
 footer.page-footer {
   margin-top: 20px;
   padding-top: 20px;
-  background-color: #3E4551;
+  background-color: #000;
   color: #fff; }
   footer.page-footer .footer-copyright {
     overflow: hidden;
