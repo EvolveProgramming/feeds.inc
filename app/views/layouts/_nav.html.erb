@@ -1,11 +1,13 @@
+<!-- Navbar-->
 
 
 
 <div class= "nav-wrap">
 <nav class="navbar navbar-toggleable-md navbar-light navbar-fixed-top">
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav ">
-            <a class="navbar-brand logo" <%=link_to "FEEDS.inc", root_path %></a>
+        <ul class="navbar-nav">
+            <a class="navbar-brand logo"> Logo
+            </a>
         </ul>
         <ul class="nav navbar-nav navbar-right righter">
             <li class="nav-item">
@@ -14,8 +16,20 @@
             <li class="nav-item">
                 <%= link_to "Feeds", feeds_path, class: "nav-link"%>
             </li>
+
+              <li class="nav-item">
+                <%= link_to "Politics", root_path, class: "nav-link"%>
+            </li>
+
+               <li class="nav-item">
+                <%= link_to "Business", root_path, class: "nav-link"%>
+            </li>
             <li class="nav-item">
                 <%= link_to "Contacts", contacts_path, class: "nav-link"%>
+            </li>
+
+              <li class="nav-item">
+                <%= link_to "Advertising", root_path, class: "nav-link"%>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="http://example.com/" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Complaints</a>
@@ -24,6 +38,7 @@
                         <a class="dropdown-item">Site Complaints</a>
                 </div>
             </li>
+
             <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="text" placeholder="Search">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>

@@ -9,67 +9,49 @@
 */
 @import "font-awesome-sprockets";
 @import "font-awesome";
-
-
-.body {
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 14px;
-    line-height: 1.42857143;
-    color: #333;
-    background-color: #f7f7f7;
-}
+@import "mdb";
 
 body .container {
+    position: relative;
+    padding: 30px;
 }
 
-.navbar {
-    background-color: #000;
+nav{
+    box-sizing: inherit;
+    font-size: 14px;
 }
 
-.logo {
-	font-family: sans-serif;
-    font-size: x-large;
-    font-weight: bolder;
+a .nav-link {
     color: #fff;
 }
-
-
-.righter {
-    padding-right: 30px;
+nav .logo {
+    transition: width .3s ease-in-out;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 0;
+    width: 230px;
+    height: 100%;
 }
 
 
-
-.navbar-light .navbar-nav .nav-link {
-    color: aliceblue;
-}
-
-.nav-item .nav-link {
-    font-size: larger;
-    font-style: oblique;
-    font-weight: bold;
-    color: aliceblue;
-}
-
-
-.table {
-	background-color: azure; 
-}
-
-/*footer*/
-.footer {
-    background-color: #f7f7f7;
-    .social {
-        display: -webkit-box;
-    }
-    @media screen and (max-width: 767px) {
+        main {
+            padding-top: 3rem;
+            padding-bottom: 2rem;
+        }
         
-    }
-}
-
-/*.social {
-    display: -webkit-box;
-    @media screen and (max-width: 767px) {
-
-    }
-}*/
+        .widget-wrapper {
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #e0e0e0;
+            margin-bottom: 2rem;
+        }
+        
+          
+        .navbar {
+            background-color: #3A3A3A;
+        }
+        
+        footer .page-footer {
+            background-color: #000000;
+            margin-top: 2rem;
+         
+        }
