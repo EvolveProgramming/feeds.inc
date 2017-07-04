@@ -4,8 +4,12 @@
         <ul>
             <li>
             <h5>Sign up to get news feeds everyday</h5></li>
-            <li><a target="_blank" href="#" class="btn btn-info">Sign up!</a></li>
-            <li><a target="_blank" href="#" class="btn btn-default">Learn more</a></li>
+            <% if user_signed_in? %>
+             <li class="upper-links"><%= link_to "Logout", destroy_user_session_path, method: :delete, class: "links" %></a></li>
+            <% else %>
+            <li><%= link_to "SignIn", new_user_session_path, class: "btn btn-info" %></a></li>
+            <li><%= link_to "SignUp", new_user_registration_path, class: "btn btn-default"%></a></li>
+            <% end %>
         </ul>
         <p class="copyright clear-float">
             <div class="credits">
